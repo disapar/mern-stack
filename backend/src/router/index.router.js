@@ -1,17 +1,16 @@
 import express from 'express';
+import { addPost, allPosts, callPost, delPost, editPost } from '../controllers/post.controller.js';
 
 const router = express.Router();
 
 
 
-router.get('/', (req,res)=>{
-    res.json('Hola mundo')
-})
+router.get('/', allPosts)
 
-router.get('/:id', (req,res)=>{
-    const id = req.params.id;
-    res.send(`<h2>Bienvenido usuario: ${id}</h2>`)
-})
+router.get('/:id', callPost)
 
+router.post('/', addPost)
 
+router.put('/', editPost)
+router.delete('/:id', delPost)
 export default router
