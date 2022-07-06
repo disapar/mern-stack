@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import router from "../router/index.router.js";
 import mongoose from "mongoose";
+
+
 export default class Server {
   constructor() {
     this.app = express();
@@ -29,6 +31,7 @@ export default class Server {
     .then(db => console.log("db conectada") )
     .catch(err=> console.log(err))
   }
+  
   listen() {
     this.app.listen(this.port, () => {
       console.log(`Server online en el puerto ${this.port}`);
