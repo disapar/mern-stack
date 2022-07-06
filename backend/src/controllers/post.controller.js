@@ -3,7 +3,7 @@ import  bPost  from "../models/post.model.js";
 export const allPosts = async(req,res)=>{
     const data = await bPost.find()
    
-    return res.json(data)
+     res.json(data)
 }
 export const callPost = async (req,res)=>{
     const {id} = req.params;
@@ -21,14 +21,12 @@ export const addPost = async (req,res) =>{
 }
 export const editPost = async (req,res)=>{
     const data = await req.body;
-    console.log(data)
-    await bPost.updateOne({_id: data.id}, data)
+   await bPost.updateOne({_id: data.id}, data)
     res.json('editado')
 
 }
 export const delPost = async ( req,res)=>{
     const id = req.params.id;
-    console.log(id)
     await bPost.remove({_id: id})
     res.json('Borrado')
 }

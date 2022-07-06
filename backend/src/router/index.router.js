@@ -12,5 +12,7 @@ router.get('/:id', callPost)
 router.post('/', addPost)
 
 router.put('/', editPost)
+
 router.delete('/:id', delPost)
+
 export default router
