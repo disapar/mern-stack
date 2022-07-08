@@ -12,17 +12,18 @@ export const callPost = async (req,res)=>{
     res.json(data)
 }
 export const addPost = async (req,res) =>{
+   
     const {title, description} = req.body;
-
+   
     const newPost = await new bPost({title,description})
     await newPost.save()
-    res.json('Agregado')
+    return res.json('Added to DB')   
 
 }
 export const editPost = async (req,res)=>{
     const data = await req.body;
    await bPost.updateOne({_id: data.id}, data)
-    res.json('editado')
+    res.json('Edit')
 
 }
 export const delPost = async ( req,res)=>{

@@ -2,14 +2,15 @@ import { urlApi } from "./urlapi"
 
 
 
-const Listposts = async (setListPosts) => {
+const Listposts = (setListPosts) => {
 
-    await fetch(urlApi,{method: "get"})
+     fetch(urlApi,{method: "get"})
     .then(res => res.json())
     .then( data => {
         setListPosts(data)
     })
-    .catch(err => console.log(err))
+    .catch(err => console.log(err)
+    )
  
 }
 

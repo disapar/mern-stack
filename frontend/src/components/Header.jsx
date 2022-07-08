@@ -5,7 +5,7 @@ const Header = () => {
     <div className='header'>
         <div className="header_r">
         <Link className="logo" to="/"><h1>Blog Posts</h1></Link> 
-        <Link className='btn-p cursor' to="/formpost/new">Load Post</Link>
+        <Link className='btn-p cursor' to="/addpost">Add Post</Link>
         </div>
     </div>
   )
