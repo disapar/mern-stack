@@ -1,6 +1,5 @@
 import {useState} from 'react'
 import Homepage from './Homepage'
-import FormPost from './Form';
 import { Route,Routes } from 'react-router-dom'
 import Viewpost from './Viewpost';
 import AddPost from './addpost';
